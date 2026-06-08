@@ -1,17 +1,20 @@
 namespace FlowerShop;
 
-public class StaffRepository
+public class StaffRepository : JsonRepository<StaffMember>
 {
-    private readonly List<StaffMember> _staff = new()
+    public StaffRepository() : base("staff.json")
     {
-        new StaffMember { Username = "owner", Password = "owner",   Name = "Owner", Role = Role.Owner },
-        new StaffMember { Username = "florist",   Password = "florist", Name = "Florist",   Role = Role.Florist },
-        new StaffMember { Username = "driver", Password = "driver",  Name = "Driver", Role = Role.Driver }
-    };
+        SeedIfEmpty(new[]
+        {
+            new StaffMember { Username = "owner", PasswordHash = "owner",   Name = "Grace", Role = Role.Owner },
+            new StaffMember { Username = "florist",   PasswordHash = "florist", Name = "Sam",   Role = Role.Florist },
+            new StaffMember { Username = "driver", PasswordHash = "driver",  Name = "Marco", Role = Role.Driver }
+        });
+    }
 
     public StaffMember? FindByUsername(string username)
     {
-        return _staff.FirstOrDefault(
+        return GetAll().FirstOrDefault(
             s => s.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
     }
 }

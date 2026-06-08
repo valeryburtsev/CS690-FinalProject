@@ -1,6 +1,6 @@
 namespace FlowerShop;
 
-public class Customer
+public class Customer : IEntity
 {
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;
@@ -9,7 +9,7 @@ public class Customer
     public string? Notes { get; set; }
 }
 
-public class Order
+public class Order : IEntity
 {
     public int Id { get; set; }
     public string OrderCode { get; set; } = string.Empty;   // human-readable, e.g. "A4F7"
@@ -39,7 +39,7 @@ public enum OrderStatus
     Cancelled
 }
 
-public class Arrangement
+public class Arrangement : IEntity
 {
     public int Id { get; set; }
     public int OrderId { get; set; }
@@ -48,7 +48,7 @@ public class Arrangement
     public decimal Price { get; set; }
 }
 
-public class Flower
+public class Flower : IEntity
 {
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;
@@ -63,7 +63,7 @@ public class Flower
     public int StemsAvailable => StemsOnHand - StemsCommitted;
 }
 
-public class FlowerRequirement
+public class FlowerRequirement : IEntity
 {
     public int Id { get; set; }
     public int ArrangementId { get; set; }
@@ -71,7 +71,7 @@ public class FlowerRequirement
     public int StemsRequired { get; set; }
 }
 
-public class Pickup
+public class Pickup : IEntity
 {
     public int Id { get; set; }
     public int OrderId { get; set; }
@@ -92,7 +92,7 @@ public enum PickupStatus
     NoShow
 }
 
-public class Delivery
+public class Delivery : IEntity
 {
     public int Id { get; set; }
     public int OrderId { get; set; }

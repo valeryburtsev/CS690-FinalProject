@@ -12,7 +12,7 @@ public class AuthService
     {
         var staff = _staffRepo.FindByUsername(username);
         if (staff is null) return null;
-        if (staff.Password != password) return null;
+        if (staff.PasswordHash != password) return null;
         return staff;
     }
 }

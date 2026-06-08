@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "Username": "owner",
+    "PasswordHash": "owner",
+    "Name": "Grace",
+    "Role": "Owner"
+  },
+  {
+    "Id": 2,
+    "Username": "florist",
+    "PasswordHash": "florist",
+    "Name": "Sam",
+    "Role": "Florist"
+  },
+  {
+    "Id": 3,
+    "Username": "driver",
+    "PasswordHash": "driver",
+    "Name": "Marco",
+    "Role": "Driver"
+  }
+]
