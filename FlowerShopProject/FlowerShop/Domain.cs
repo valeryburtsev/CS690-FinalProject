@@ -25,7 +25,6 @@ public class Order : IEntity
 public enum OrderType
 {
     WalkIn,
-    Custom,
     Pickup,
     Delivery
 }

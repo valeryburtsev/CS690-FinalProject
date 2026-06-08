@@ -4,9 +4,26 @@ using Spectre.Console;
 const string InStoreOption  = "1. In Store";
 const string DeliveryOption = "2. Delivery";
 
-// --- Wire dependencies ---
-var staffRepo = new StaffRepository();
-var authService = new AuthService(staffRepo);
+// --- Wire repositories ---
+var staffRepo             = new StaffRepository();
+var customerRepo          = new CustomerRepository();
+var orderRepo             = new OrderRepository();
+var arrangementRepo       = new ArrangementRepository();
+var flowerRepo            = new FlowerRepository();
+var flowerRequirementRepo = new FlowerRequirementRepository();
+var pickupRepo            = new PickupRepository();
+var deliveryRepo          = new DeliveryRepository();
+
+// --- Wire services ---
+var authService      = new AuthService(staffRepo);
+var customerService  = new CustomerService(customerRepo);
+var inventoryService = new InventoryService(flowerRepo);
+var deliveryService  = new DeliveryService(deliveryRepo);
+var pickupService    = new PickupService(pickupRepo, orderRepo, customerRepo);
+var orderService     = new OrderService(orderRepo, arrangementRepo, flowerRequirementRepo,
+                                          deliveryService, pickupService, inventoryService);
+var endOfDayService  = new EndOfDayService(orderRepo, deliveryRepo, pickupRepo, flowerRepo);
+var addressValidator = new AddressValidator();
 
 // --- Login screen ---
 ConsoleUi.PrintHeader("Login");
@@ -43,17 +60,35 @@ if(user.Role == Role.Owner)
 
     if (mode == DeliveryOption)
     {
-        new DriverMenuController(user).Run();
+        new DriverMenuController(user, deliveryService).Run();
     }
     else
     {
-        new StoreMenuController(user).Run();
+        new StoreMenuController(
+        user,
+        customerService,
+        orderService,
+        inventoryService,
+        pickupService,
+        deliveryService,
+        endOfDayService,
+        addressValidator
+    ).Run();
     }
 } else if(user.Role == Role.Florist) {
     AnsiConsole.Clear();
-    new StoreMenuController(user).Run();
+    new StoreMenuController(
+        user,
+        customerService,
+        orderService,
+        inventoryService,
+        pickupService,
+        deliveryService,
+        endOfDayService,
+        addressValidator
+    ).Run();
 } else if(user.Role == Role.Driver)
 {
     AnsiConsole.Clear();
-    new DriverMenuController(user).Run();
+    new DriverMenuController(user, deliveryService).Run();
 }

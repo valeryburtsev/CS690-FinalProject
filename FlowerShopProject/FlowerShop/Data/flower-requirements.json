@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 1,
+    "ArrangementId": 1,
+    "FlowerId": 1,
+    "StemsRequired": 1
+  },
+  {
+    "Id": 2,
+    "ArrangementId": 2,
+    "FlowerId": 1,
+    "StemsRequired": 12
+  },
+  {
+    "Id": 3,
+    "ArrangementId": 2,
+    "FlowerId": 2,
+    "StemsRequired": 1
+  }
+]

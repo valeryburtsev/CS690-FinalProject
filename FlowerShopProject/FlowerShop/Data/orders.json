@@ -1,0 +1,24 @@
+[
+  {
+    "Id": 1,
+    "OrderCode": "64ZX",
+    "CustomerId": 1,
+    "Type": "WalkIn",
+    "Status": "Completed",
+    "PromisedTime": "2026-06-08T15:56:06.5638334Z",
+    "CreatedAt": "2026-06-08T15:56:06.5655124Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 4.00
+  },
+  {
+    "Id": 2,
+    "OrderCode": "MR3U",
+    "CustomerId": 1,
+    "Type": "Pickup",
+    "Status": "New",
+    "PromisedTime": "2026-06-11T12:00:00",
+    "CreatedAt": "2026-06-08T15:56:51.575202Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 52.00
+  }
+]

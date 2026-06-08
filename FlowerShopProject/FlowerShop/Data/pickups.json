@@ -1,0 +1,14 @@
+[
+  {
+    "Id": 1,
+    "OrderId": 2,
+    "Occasion": "party",
+    "PickupDate": "2026-06-11T00:00:00",
+    "WindowStart": "12:00:00",
+    "WindowEnd": "13:00:00",
+    "LabelText": "john \u00B7 party \u00B7 2026-06-11 \u00B7 #MR3U",
+    "Status": "Pending",
+    "CollectedAt": null,
+    "CollectedByStaffId": null
+  }
+]
