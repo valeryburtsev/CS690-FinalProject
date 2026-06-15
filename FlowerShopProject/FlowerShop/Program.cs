@@ -60,7 +60,7 @@ if(user.Role == Role.Owner)
 
     if (mode == DeliveryOption)
     {
-        new DriverMenuController(user, deliveryService).Run();
+        new DriverMenuController(user, deliveryService, orderService).Run();
     }
     else
     {
@@ -90,5 +90,5 @@ if(user.Role == Role.Owner)
 } else if(user.Role == Role.Driver)
 {
     AnsiConsole.Clear();
-    new DriverMenuController(user, deliveryService).Run();
+    new DriverMenuController(user, deliveryService, orderService).Run();
 }

@@ -20,6 +20,11 @@ public class PickupService
             .OrderBy(p => p.WindowStart)
             .ToList();
 
+    public List<Pickup> GetTodaysAll(DateTime today) =>
+    _pickups.GetAll()
+        .Where(p => p.PickupDate.Date == today.Date)
+        .OrderBy(p => p.WindowStart)
+        .ToList();
     public Pickup? GetById(int id) => _pickups.GetById(id);
 
     public void MarkCollected(int pickupId, int staffId)
