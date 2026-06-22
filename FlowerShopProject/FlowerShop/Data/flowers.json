@@ -3,25 +3,25 @@
     "Id": 1,
     "Name": "Roses",
     "Color": "Red",
-    "StemsOnHand": 59,
-    "StemsCommitted": 12,
+    "StemsOnHand": 13,
+    "StemsCommitted": 8,
     "LowStockThreshold": 30,
-    "LastStockArrivalDate": "2026-06-08T00:00:00+00:00",
+    "LastStockArrivalDate": "2026-06-22T00:00:00+00:00",
     "UnitCost": 1.50,
     "SuggestedPrice": 4.00,
-    "StemsAvailable": 47
+    "StemsAvailable": 5
   },
   {
     "Id": 2,
     "Name": "Roses",
     "Color": "White",
-    "StemsOnHand": 18,
-    "StemsCommitted": 1,
+    "StemsOnHand": 8,
+    "StemsCommitted": 2,
     "LowStockThreshold": 30,
     "LastStockArrivalDate": "2026-06-08T00:00:00+00:00",
     "UnitCost": 1.50,
     "SuggestedPrice": 4.00,
-    "StemsAvailable": 17
+    "StemsAvailable": 6
   },
   {
     "Id": 3,

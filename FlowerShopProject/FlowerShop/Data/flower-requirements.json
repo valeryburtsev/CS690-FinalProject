@@ -16,5 +16,101 @@
     "ArrangementId": 2,
     "FlowerId": 2,
     "StemsRequired": 1
+  },
+  {
+    "Id": 4,
+    "ArrangementId": 3,
+    "FlowerId": 1,
+    "StemsRequired": 1
+  },
+  {
+    "Id": 5,
+    "ArrangementId": 4,
+    "FlowerId": 1,
+    "StemsRequired": 5
+  },
+  {
+    "Id": 6,
+    "ArrangementId": 4,
+    "FlowerId": 2,
+    "StemsRequired": 1
+  },
+  {
+    "Id": 7,
+    "ArrangementId": 5,
+    "FlowerId": 1,
+    "StemsRequired": 10
+  },
+  {
+    "Id": 8,
+    "ArrangementId": 6,
+    "FlowerId": 1,
+    "StemsRequired": 10
+  },
+  {
+    "Id": 9,
+    "ArrangementId": 7,
+    "FlowerId": 1,
+    "StemsRequired": 10
+  },
+  {
+    "Id": 10,
+    "ArrangementId": 8,
+    "FlowerId": 1,
+    "StemsRequired": 10
+  },
+  {
+    "Id": 11,
+    "ArrangementId": 9,
+    "FlowerId": 1,
+    "StemsRequired": 10
+  },
+  {
+    "Id": 12,
+    "ArrangementId": 10,
+    "FlowerId": 1,
+    "StemsRequired": 1
+  },
+  {
+    "Id": 13,
+    "ArrangementId": 11,
+    "FlowerId": 1,
+    "StemsRequired": 5
+  },
+  {
+    "Id": 14,
+    "ArrangementId": 11,
+    "FlowerId": 2,
+    "StemsRequired": 5
+  },
+  {
+    "Id": 15,
+    "ArrangementId": 12,
+    "FlowerId": 1,
+    "StemsRequired": 5
+  },
+  {
+    "Id": 16,
+    "ArrangementId": 13,
+    "FlowerId": 1,
+    "StemsRequired": 5
+  },
+  {
+    "Id": 17,
+    "ArrangementId": 13,
+    "FlowerId": 2,
+    "StemsRequired": 5
+  },
+  {
+    "Id": 18,
+    "ArrangementId": 14,
+    "FlowerId": 1,
+    "StemsRequired": 5
+  },
+  {
+    "Id": 19,
+    "ArrangementId": 15,
+    "FlowerId": 1,
+    "StemsRequired": 1
   }
 ]

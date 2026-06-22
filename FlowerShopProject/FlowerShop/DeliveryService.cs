@@ -4,19 +4,19 @@ public class DeliveryService
 {
     private const int CapacityPerWindow = 5;
 
-    private readonly DeliveryRepository _deliveries;
+    private readonly Repository<Delivery> _deliveries;
 
-    public DeliveryService(DeliveryRepository deliveries)
+    public DeliveryService(Repository<Delivery> deliveries)
     {
         _deliveries = deliveries;
     }
 
-    // UC1: how many deliveries are already in this date + window?
+    // UC1:
     public int CountInWindow(DateTime date, TimeSpan windowStart, TimeSpan windowEnd) =>
         _deliveries.GetAll().Count(d =>
             d.DeliveryDate.Date == date.Date &&
             d.WindowStart < windowEnd &&
-            d.WindowEnd   > windowStart);
+            d.WindowEnd > windowStart);
 
     public int CapacityForWindow() => CapacityPerWindow;
 

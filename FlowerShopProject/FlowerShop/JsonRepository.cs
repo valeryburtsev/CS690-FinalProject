@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace FlowerShop;
 
-public class JsonRepository<T> where T : IEntity, new()
+public class JsonRepository<T> : Repository<T> where T : IEntity, new()
 {
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
@@ -12,86 +12,33 @@ public class JsonRepository<T> where T : IEntity, new()
     };
 
     private readonly string _filePath;
-    private List<T> _items = new();
-    private bool _loaded;
 
-    public JsonRepository(string fileName)
+    public JsonRepository(string fileName, string? dataDirectory = null)
     {
-        _filePath = Path.Combine("Data", fileName);
+        var dir = dataDirectory ?? "Data";
+        _filePath = Path.Combine(dir, fileName);
     }
 
-    public List<T> GetAll()
+    protected override void EnsureLoaded()
     {
-        EnsureLoaded();
-        return _items.ToList();
-    }
-
-    public T? GetById(int id)
-    {
-        EnsureLoaded();
-        return _items.FirstOrDefault(x => x.Id == id);
-    }
-
-    public T Add(T item)
-    {
-        EnsureLoaded();
-        item.Id = _items.Count == 0 ? 1 : _items.Max(x => x.Id) + 1;
-        _items.Add(item);
-        Save();
-        return item;
-    }
-
-    public void Update(T item)
-    {
-        EnsureLoaded();
-        var index = _items.FindIndex(x => x.Id == item.Id);
-        if (index < 0)
-            throw new InvalidOperationException($"Item with id {item.Id} not found in {_filePath}");
-        _items[index] = item;
-        Save();
-    }
-
-    public void Delete(int id)
-    {
-        EnsureLoaded();
-        _items.RemoveAll(x => x.Id == id);
-        Save();
-    }
-
-    public void SeedIfEmpty(IEnumerable<T> seedItems)
-    {
-        EnsureLoaded();
-        if (_items.Count > 0) return;
-
-        int nextId = 1;
-        foreach (var item in seedItems)
-        {
-            item.Id = nextId++;
-            _items.Add(item);
-        }
-        Save();
-    }
-
-    private void EnsureLoaded()
-    {
-        if (_loaded) return;
+        if (Loaded) return;
 
         if (File.Exists(_filePath))
         {
             var json = File.ReadAllText(_filePath);
-            _items = JsonSerializer.Deserialize<List<T>>(json, JsonOptions) ?? new List<T>();
+            Items = JsonSerializer.Deserialize<List<T>>(json, JsonOptions) ?? new List<T>();
         }
 
-        _loaded = true;
+        Loaded = true;
     }
 
-    private void Save()
+    protected override void Save()
     {
         var directory = Path.GetDirectoryName(_filePath);
         if (!string.IsNullOrEmpty(directory))
             Directory.CreateDirectory(directory);
 
-        var json = JsonSerializer.Serialize(_items, JsonOptions);
+        var json = JsonSerializer.Serialize(Items, JsonOptions);
         File.WriteAllText(_filePath, json);
     }
 }

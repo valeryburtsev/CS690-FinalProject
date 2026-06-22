@@ -20,5 +20,148 @@
     "CreatedAt": "2026-06-08T15:56:51.575202Z",
     "CreatedByStaffId": 1,
     "TotalPrice": 52.00
+  },
+  {
+    "Id": 3,
+    "OrderCode": "2MJ6",
+    "CustomerId": 2,
+    "Type": "WalkIn",
+    "Status": "Completed",
+    "PromisedTime": "2026-06-15T11:30:26.0029703Z",
+    "CreatedAt": "2026-06-15T11:30:26.0043856Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 4.00
+  },
+  {
+    "Id": 4,
+    "OrderCode": "UQX5",
+    "CustomerId": 4,
+    "Type": "Delivery",
+    "Status": "New",
+    "PromisedTime": "2026-06-22T09:00:00",
+    "CreatedAt": "2026-06-22T09:54:45.204932Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 24.00
+  },
+  {
+    "Id": 5,
+    "OrderCode": "MSJ8",
+    "CustomerId": 1,
+    "Type": "WalkIn",
+    "Status": "Completed",
+    "PromisedTime": "2026-06-22T09:55:29.3387454Z",
+    "CreatedAt": "2026-06-22T09:55:29.33876Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 40.00
+  },
+  {
+    "Id": 6,
+    "OrderCode": "2F6P",
+    "CustomerId": 5,
+    "Type": "WalkIn",
+    "Status": "Completed",
+    "PromisedTime": "2026-06-22T09:56:35.0232358Z",
+    "CreatedAt": "2026-06-22T09:56:35.0232479Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 40.00
+  },
+  {
+    "Id": 7,
+    "OrderCode": "BHFG",
+    "CustomerId": 6,
+    "Type": "Delivery",
+    "Status": "New",
+    "PromisedTime": "2026-06-22T09:00:00",
+    "CreatedAt": "2026-06-22T09:59:27.8505598Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 40.00
+  },
+  {
+    "Id": 8,
+    "OrderCode": "2QT5",
+    "CustomerId": 5,
+    "Type": "WalkIn",
+    "Status": "Completed",
+    "PromisedTime": "2026-06-22T10:01:00.8480418Z",
+    "CreatedAt": "2026-06-22T10:01:00.8504278Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 40.00
+  },
+  {
+    "Id": 9,
+    "OrderCode": "W4SX",
+    "CustomerId": 1,
+    "Type": "WalkIn",
+    "Status": "Completed",
+    "PromisedTime": "2026-06-22T10:01:27.0148528Z",
+    "CreatedAt": "2026-06-22T10:01:27.0148659Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 40.00
+  },
+  {
+    "Id": 10,
+    "OrderCode": "4R9Z",
+    "CustomerId": 8,
+    "Type": "Delivery",
+    "Status": "New",
+    "PromisedTime": "2026-06-22T09:00:00",
+    "CreatedAt": "2026-06-22T10:04:45.7156986Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 4.00
+  },
+  {
+    "Id": 11,
+    "OrderCode": "E8YJ",
+    "CustomerId": 10,
+    "Type": "WalkIn",
+    "Status": "Completed",
+    "PromisedTime": "2026-06-22T10:06:00.1592778Z",
+    "CreatedAt": "2026-06-22T10:06:00.1607394Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 40.00
+  },
+  {
+    "Id": 12,
+    "OrderCode": "M27R",
+    "CustomerId": 1,
+    "Type": "WalkIn",
+    "Status": "Completed",
+    "PromisedTime": "2026-06-22T10:06:57.3313093Z",
+    "CreatedAt": "2026-06-22T10:06:57.3328837Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 20.00
+  },
+  {
+    "Id": 13,
+    "OrderCode": "F9NT",
+    "CustomerId": 11,
+    "Type": "WalkIn",
+    "Status": "Completed",
+    "PromisedTime": "2026-06-22T10:07:15.739907Z",
+    "CreatedAt": "2026-06-22T10:07:15.7399188Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 40.00
+  },
+  {
+    "Id": 14,
+    "OrderCode": "ZHE9",
+    "CustomerId": 10,
+    "Type": "Delivery",
+    "Status": "New",
+    "PromisedTime": "2026-06-22T09:00:00",
+    "CreatedAt": "2026-06-22T10:20:07.7389203Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 20.00
+  },
+  {
+    "Id": 15,
+    "OrderCode": "RPET",
+    "CustomerId": 1,
+    "Type": "Delivery",
+    "Status": "New",
+    "PromisedTime": "2026-06-22T09:00:00",
+    "CreatedAt": "2026-06-22T10:21:15.1658696Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 4.00
   }
 ]

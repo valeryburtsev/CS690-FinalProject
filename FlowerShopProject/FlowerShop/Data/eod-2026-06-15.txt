@@ -1,0 +1,21 @@
+End-of-Day Summary  —  2026-06-15
+==================================================
+
+Orders by type
+  Walk-in:  0
+  Pickup:   0
+  Delivery: 0
+  Total:    0
+
+Deliveries
+  Completed: 0
+  Attempted: 0
+  Failed:    0
+
+Pickups
+  Collected:   0
+  Uncollected: 0
+
+Low-stock flowers:
+  - White Roses (18 stems, threshold 30)
+  - Green Eucalyptus (12 stems, threshold 24)

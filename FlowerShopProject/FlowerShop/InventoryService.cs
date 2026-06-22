@@ -2,9 +2,9 @@ namespace FlowerShop;
 
 public class InventoryService
 {
-    private readonly FlowerRepository _flowers;
+    private readonly Repository<Flower> _flowers;
 
-    public InventoryService(FlowerRepository flowers)
+    public InventoryService(Repository<Flower> flowers)
     {
         _flowers = flowers;
     }
