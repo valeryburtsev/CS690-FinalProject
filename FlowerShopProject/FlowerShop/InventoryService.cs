@@ -9,8 +9,8 @@ public class InventoryService
         _flowers = flowers;
     }
 
-    public List<Flower> GetAll() => _flowers.GetAll();
-    public Flower? GetById(int id) => _flowers.GetById(id);
+    public List<Flower> GetAll() { return _flowers.GetAll(); }
+    public Flower? GetById(int id) { return _flowers.GetById(id); }
 
     public List<Flower> GetLowStock() =>
         _flowers.GetAll().Where(f => f.StemsOnHand < f.LowStockThreshold).ToList();

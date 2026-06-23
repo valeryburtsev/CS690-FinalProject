@@ -1,18 +1,38 @@
 namespace FlowerShop;
+
 public class AuthService
 {
-    private readonly StaffRepository _staffRepo;
+    private readonly Repository<StaffMember> _staffRepo;
 
-    public AuthService(StaffRepository staffRepo)
+    public AuthService(Repository<StaffMember> staffRepo)
     {
         _staffRepo = staffRepo;
     }
 
     public StaffMember? TryLogin(string username, string password)
     {
-        var staff = _staffRepo.FindByUsername(username);
-        if (staff is null) return null;
-        if (staff.PasswordHash != password) return null;
-        return staff;
+        var allStaff = _staffRepo.GetAll();
+
+        StaffMember? matched = null;
+        foreach (var staff in allStaff)
+        {
+            if (staff.Username.Equals(username, StringComparison.OrdinalIgnoreCase))
+            {
+                matched = staff;
+                break;
+            }
+        }
+
+        if (matched == null)
+        {
+            return null;
+        }
+
+        if (matched.PasswordHash != password)
+        {
+            return null;
+        }
+
+        return matched;
     }
 }

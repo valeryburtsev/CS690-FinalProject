@@ -2,11 +2,14 @@ namespace FlowerShop;
 
 public class PickupService
 {
-    private readonly PickupRepository _pickups;
-    private readonly OrderRepository _orders;
-    private readonly CustomerRepository _customers;
+    private readonly Repository<Pickup> _pickups;
+    private readonly Repository<Order> _orders;
+    private readonly Repository<Customer> _customers;
 
-    public PickupService(PickupRepository pickups, OrderRepository orders, CustomerRepository customers)
+    public PickupService(
+      Repository<Pickup> pickups,
+      Repository<Order> orders,
+      Repository<Customer> customers)
     {
         _pickups = pickups;
         _orders = orders;
@@ -25,7 +28,7 @@ public class PickupService
         .Where(p => p.PickupDate.Date == today.Date)
         .OrderBy(p => p.WindowStart)
         .ToList();
-    public Pickup? GetById(int id) => _pickups.GetById(id);
+    public Pickup? GetById(int id) { return _pickups.GetById(id); }
 
     public void MarkCollected(int pickupId, int staffId)
     {
@@ -38,7 +41,7 @@ public class PickupService
     }
 
     // Called by OrderService when creating a Pickup order
-    internal Pickup Create(int orderId, int customerId, string occasion,
+    public Pickup Create(int orderId, int customerId, string occasion,
                             DateTime pickupDate, TimeSpan windowStart, TimeSpan windowEnd)
     {
         var customer = _customers.GetById(customerId);
