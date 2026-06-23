@@ -103,5 +103,26 @@
     "AttemptReason": null,
     "RoutePosition": null,
     "CompletedAt": null
+  },
+  {
+    "Id": 6,
+    "OrderId": 17,
+    "RecipientName": "Maria",
+    "RecipientPhone": "1234",
+    "Address": {
+      "Street": "123 Main st",
+      "Unit": null,
+      "HasNoUnit": true,
+      "City": "Lisboa",
+      "State": "PT",
+      "Zip": "1990"
+    },
+    "DeliveryDate": "2026-06-23T00:00:00",
+    "WindowStart": "09:00:00",
+    "WindowEnd": "11:00:00",
+    "Status": "Attempted",
+    "AttemptReason": "NO ANSWER",
+    "RoutePosition": null,
+    "CompletedAt": "2026-06-23T15:05:11.5126158Z"
   }
 ]

@@ -174,5 +174,16 @@
     "CreatedAt": "2026-06-23T14:51:58.4194467Z",
     "CreatedByStaffId": 1,
     "TotalPrice": 20.00
+  },
+  {
+    "Id": 17,
+    "OrderCode": "BHR6",
+    "CustomerId": 14,
+    "Type": "Delivery",
+    "Status": "New",
+    "PromisedTime": "2026-06-23T09:00:00",
+    "CreatedAt": "2026-06-23T15:01:34.2729426Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 4.00
   }
 ]

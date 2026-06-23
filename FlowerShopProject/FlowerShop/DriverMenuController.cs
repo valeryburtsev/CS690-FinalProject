@@ -5,9 +5,9 @@ namespace FlowerShop;
 public class DriverMenuController
 {
     private const string OptionViewRoute = "1. View today's route";
-    private const string OptionMarkStop  = "2. Mark stop status";
-    private const string OptionViewStop  = "3. View stop detail";
-    private const string OptionExit      = "4. Exit";
+    private const string OptionMarkStop = "2. Mark stop status";
+    private const string OptionViewStop = "3. View stop detail";
+    private const string OptionExit = "4. Exit";
 
     private readonly StaffMember _user;
     private readonly DeliveryService _deliveries;
@@ -27,9 +27,9 @@ public class DriverMenuController
             AnsiConsole.Clear();
             ConsoleUi.PrintHeader("Driver Menu");
 
-            var route     = _deliveries.GetRouteForDate(DateTime.Today);
+            var route = _deliveries.GetRouteForDate(DateTime.Today);
             var completed = route.Count(d => d.Status == DeliveryStatus.Completed);
-            var pending   = route.Count - completed;
+            var pending = route.Count - completed;
 
             AnsiConsole.WriteLine($"Signed in as {_user.Name}.");
             AnsiConsole.WriteLine();
@@ -44,9 +44,9 @@ public class DriverMenuController
             switch (choice)
             {
                 case OptionViewRoute: HandleViewRoute(); break;
-                case OptionMarkStop:  HandleMarkStop();  break;
-                case OptionViewStop:  HandleViewStop();  break;
-                case OptionExit:      return;
+                case OptionMarkStop: HandleMarkStop(); break;
+                case OptionViewStop: HandleViewStop(); break;
+                case OptionExit: return;
             }
         }
     }
@@ -109,8 +109,8 @@ public class DriverMenuController
 
         const string StatusCompleted = "1. Completed";
         const string StatusAttempted = "2. Attempted (with reason)";
-        const string StatusFailed    = "3. Failed (with reason)";
-        const string StatusCancel    = "4. Cancel";
+        const string StatusFailed = "3. Failed (with reason)";
+        const string StatusCancel = "4. Cancel";
 
         var pick = AnsiConsole.Prompt(
             new SelectionPrompt<string>()
@@ -185,7 +185,7 @@ public class DriverMenuController
     {
         const string Cancel = "(Cancel)";
         var labels = route
-            .Select((d, i) => $"{i + 1}. {d.WindowStart:hh\\:mm}-{d.WindowEnd:hh\\:mm}  {d.RecipientName}  [{d.Status}]")
+            .Select((d, i) => $"{i + 1}. {d.WindowStart:hh\\:mm}-{d.WindowEnd:hh\\:mm}  {d.RecipientName}  ({d.Status})")
             .ToList();
         labels.Add(Cancel);
 
