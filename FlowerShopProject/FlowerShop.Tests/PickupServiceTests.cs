@@ -87,7 +87,7 @@ public class PickupServiceTests
             orderId:     order.Id,
             customerId:  customer.Id,
             occasion:    "Birthday",
-            pickupDate:  new DateTime(2026, 6, 25),
+            pickupDate:  new DateTime(2026, 6, 23),
             windowStart: TimeSpan.FromHours(10),
             windowEnd:   TimeSpan.FromHours(12));
 

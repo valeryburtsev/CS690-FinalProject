@@ -163,5 +163,16 @@
     "CreatedAt": "2026-06-22T10:21:15.1658696Z",
     "CreatedByStaffId": 1,
     "TotalPrice": 4.00
+  },
+  {
+    "Id": 16,
+    "OrderCode": "NJMP",
+    "CustomerId": 13,
+    "Type": "Pickup",
+    "Status": "New",
+    "PromisedTime": "2026-06-23T11:00:00",
+    "CreatedAt": "2026-06-23T14:51:58.4194467Z",
+    "CreatedByStaffId": 1,
+    "TotalPrice": 20.00
   }
 ]

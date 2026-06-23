@@ -4,12 +4,12 @@
     "Name": "Roses",
     "Color": "Red",
     "StemsOnHand": 13,
-    "StemsCommitted": 8,
+    "StemsCommitted": 13,
     "LowStockThreshold": 30,
     "LastStockArrivalDate": "2026-06-22T00:00:00+00:00",
     "UnitCost": 1.50,
     "SuggestedPrice": 4.00,
-    "StemsAvailable": 5
+    "StemsAvailable": 0
   },
   {
     "Id": 2,

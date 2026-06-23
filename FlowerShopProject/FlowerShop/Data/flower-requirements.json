@@ -112,5 +112,11 @@
     "ArrangementId": 15,
     "FlowerId": 1,
     "StemsRequired": 1
+  },
+  {
+    "Id": 20,
+    "ArrangementId": 16,
+    "FlowerId": 1,
+    "StemsRequired": 5
   }
 ]

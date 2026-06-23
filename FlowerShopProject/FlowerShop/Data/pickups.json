@@ -10,5 +10,17 @@
     "Status": "Pending",
     "CollectedAt": null,
     "CollectedByStaffId": null
+  },
+  {
+    "Id": 2,
+    "OrderId": 16,
+    "Occasion": "Wedding",
+    "PickupDate": "2026-06-23T00:00:00",
+    "WindowStart": "11:00:00",
+    "WindowEnd": "13:00:00",
+    "LabelText": "Maria \u00B7 Wedding \u00B7 2026-06-23 \u00B7 #NJMP",
+    "Status": "Collected",
+    "CollectedAt": "2026-06-23T14:52:56.9291252Z",
+    "CollectedByStaffId": 1
   }
 ]
